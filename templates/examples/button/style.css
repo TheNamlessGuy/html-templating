@@ -1,0 +1,62 @@
+:root {
+  --button--bg-default: #373737;
+  --button--fg-default: #CACACA;
+
+  --button--bg-info: #00006F;
+  --button--fg-info: #00F;
+
+  --button--bg-ok: #006F00;
+  --button--fg-ok: #0F0;
+
+  --button--bg-cancel: #6F0000;
+  --button--fg-cancel: #F00;
+
+  --button--disabled-overlay-color: rgba(0, 0, 0, 0.5);
+}
+
+span{{ID}}.button-container.disabled {
+  cursor: not-allowed;
+}
+
+button.button {
+  background-color: var(--button--bg-default);
+  color: var(--button--fg-default);
+  border: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+span{{ID}}.button-container.disabled > button.button {
+  pointer-events: none;
+}
+
+button.button.button-info {
+  background-color: var(--button--bg-info);
+  color: var(--button--fg-info);
+}
+
+button.button.button-ok {
+  background-color: var(--button--bg-ok);
+  color: var(--button--fg-ok);
+}
+
+button.button.button-cancel {
+  background-color: var(--button--bg-cancel);
+  color: var(--button--fg-cancel);
+}
+
+span{{ID}}.button-container.disabled > button.button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--button--disabled-overlay-color);
+}
+
+span{{ID}}.button-container > button.button,
+span{{ID}}.button-container.disabled > button.button:before {
+  border-radius: 4px;
+}

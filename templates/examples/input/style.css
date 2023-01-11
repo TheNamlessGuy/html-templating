@@ -1,0 +1,43 @@
+.hidden {
+  display: none;
+}
+
+:root {
+  --input--bg-color--faded: #11132F;
+  --input--bg-color--light: #31346D;
+  --input--fg-color: #FFF;
+  --input--fg-color--light: #4949DD;
+}
+
+{{ID}} {
+  display: flex;
+  width: 100%;
+}
+
+.input-title {
+  background-color: var(--input--bg-color--light);
+  margin-right: 0;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  border: 2px solid var(--input--fg-color--light);
+  border-right: 0;
+}
+
+.input {
+  background-color: var(--input--bg-color--faded);
+  color: var(--input--fg-color);
+  padding: 5px;
+  border-radius: 0 5px 5px 0;
+  border: 2px solid var(--input--fg-color--light);
+  border-left: 0;
+  flex-grow: 1;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input.titleless {
+  border: 2px solid var(--input--fg-color--light);
+  border-radius: 5px;
+}
